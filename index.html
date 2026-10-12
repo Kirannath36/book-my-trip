@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BookMyTrip - discover beautiful stays and plan a vacation in Indian Rupees.">
+  <title>BookMyTrip | Explore & Stay</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="site">
+    <header class="header">
+      <a href="#home" class="logo" aria-label="BookMyTrip home">bookmy<span>trip<span class="dot">.</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+    <nav class="nav" id="navigation" aria-label="Main navigation">
+      <a href="#hotels">Hotels</a><a href="#flights">Flights</a><a href="#vacations">Vacations</a><a href="#others">Others</a>
+    </nav>
+    <main id="home">
+      <section class="hero" aria-label="Featured destination">
+        <div class="hero-box"><h1>Mont Blance</h1><p>Escape to a beautiful overwater paradise.</p><button class="outline-btn" data-book="Overwater Villa" data-price="18999">Book from ₹18,999 / night</button></div>
+      </section>
+      <section class="features" id="hotels">
+        <article><h2>Luxury Hotels</h2><p>Discover unforgettable stays, spectacular sea views and relaxing suites for your next holiday.</p><strong>From ₹4,999 / night</strong></article>
+        <article id="flights"><h2>Easy Travel</h2><p>Explore dream destinations and plan your journey with simple, convenient travel options.</p><strong>Packages from ₹12,499</strong></article>
+        <article id="vacations"><h2>Beach Vacations</h2><p>Enjoy warm sunshine, ocean breezes and memorable getaways with your loved ones.</p><strong>From ₹8,999 / person</strong></article>
+      </section>
+      <section class="highlight" aria-label="Featured hotel room">
+        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1100&q=85" alt="Comfortable luxury hotel bedroom" loading="lazy">
+        <div><h2>Stay in Comfort</h2><p>Beautiful rooms with modern facilities, soft bedding and relaxing views. Make every night of your holiday special.</p><p class="price">₹6,499 <small>/ night</small></p><button class="outline-btn" data-book="Luxury Room" data-price="6499">Learn More & Book</button></div>
+      </section>
+      <section class="bottom" id="others">
+        <div class="beach"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85" alt="Tropical sea and beach" loading="lazy"><h3>Seaside Escape</h3><p>Relax by the sea and experience a refreshing beach holiday. Packages start at <strong>₹9,999</strong> per person.</p><button class="text-btn" data-book="Seaside Escape" data-price="9999">Learn More →</button></div>
+        <blockquote class="quote"><span class="quote-mark">“</span><p>A wonderful place to relax, enjoy the ocean and make unforgettable memories.</p><footer>— Happy Customer<br><small>BookMyTrip Guest</small></footer></blockquote>
+      </section>
+    </main>
+    <footer class="footer"><span>© <span id="year"></span> BookMyTrip</span><a href="#" data-info="Privacy Policy">Privacy Policy</a><a href="#" data-info="Terms of Service">Terms of Service</a></footer>
+  </div>
+  <dialog id="bookingDialog" class="booking-dialog">
+    <form id="bookingForm">
+      <button type="button" class="close" id="closeDialog" aria-label="Close">×</button>
+      <h2>Booking Enquiry</h2><p id="selectedStay"></p>
+      <label for="guestName">Your name</label><input id="guestName" name="guestName" required maxlength="70" placeholder="Enter your name">
+      <label for="guestEmail">Email</label><input id="guestEmail" name="guestEmail" type="email" required placeholder="name@example.com">
+      <label for="checkin">Check-in date</label><input id="checkin" name="checkin" type="date" required>
+      <label for="nights">Nights / package units</label><input id="nights" name="nights" type="number" min="1" max="30" value="1" required>
+      <p class="total">Estimated total: <strong id="totalPrice">₹0</strong></p>
+      <button type="submit" class="submit-btn">Save Enquiry</button><p id="formMessage" role="status"></p>
+      <small>Demo only: this does not reserve a room or collect payment. Enquiries are saved in this browser.</small>
+    </form>
+  </dialog>
+</body>
+</html>
